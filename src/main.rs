@@ -5,7 +5,12 @@ use iced::widget::{center_x, column, container, row, scrollable, table, text};
 use iced::{Center, Element, Fill, Font, Task, Theme};
 
 pub fn main() -> iced::Result {
+    let icon = iced::window::icon::from_file_data(include_bytes!("../app.png"), None).ok();
     iced::application(App::new, App::update, App::view)
+        .window(iced::window::Settings {
+            icon,
+            ..Default::default()
+        })
         .theme(Theme::CatppuccinMocha)
         .run()
 }
