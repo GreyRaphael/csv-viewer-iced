@@ -1,3 +1,5 @@
+#![windows_subsystem = "windows"]
+
 use iced::font;
 use iced::widget::{center_x, column, container, row, scrollable, table, text};
 use iced::{Center, Element, Fill, Font, Task, Theme};
